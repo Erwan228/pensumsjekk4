@@ -15,7 +15,7 @@
             bilforhandlerern.LeggTilBil(bil3);
             bilforhandlerern.LeggTilBil(bil4);
             bilforhandlerern.LeggTilBil(bil5);
-            Console.WriteLine("bilene i hellvete:");
+            Console.WriteLine("bilene hos forhandleren:");
             foreach (Bil bil in bilforhandlerern.Biler)
             {
                 Console.WriteLine(bil.Merke + " " + bil.Registreringsnummer);
@@ -27,6 +27,22 @@
             foreach (Bil bil in bilforhandlerern.Biler)
             {
                 Console.WriteLine(bil.Merke);
+            }
+            Console.ReadKey();
+            Console.WriteLine();
+            Console.WriteLine("nå, alle bilene som er eldre enn 2020");
+            var EldreBiler = bilforhandlerern.eldreBiler(2020);
+            foreach (Bil Bil in EldreBiler)
+            {
+                Console.WriteLine(Bil.Merke + " " + Bil.Årgang);
+            }
+            Console.ReadKey();
+            Console.WriteLine();
+            Console.WriteLine("Og alle bilene som har kjørt mer enn 1K KM");
+            var LangkjørteVrak = bilforhandlerern.longRoad(1000);
+            foreach (Bil Bil in LangkjørteVrak)
+            {
+                Console.WriteLine(Bil.Merke + " " + Bil.Kilometer);
             }
         }
     }
