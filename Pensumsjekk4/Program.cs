@@ -15,6 +15,14 @@
             bilforhandlerern.LeggTilBil(bil3);
             bilforhandlerern.LeggTilBil(bil4);
             bilforhandlerern.LeggTilBil(bil5);
+            Console.WriteLine("bilene i hellvete:");
+            foreach (Bil bil in bilforhandlerern.Biler)
+            {
+                Console.WriteLine(bil.Merke + " " + bil.Registreringsnummer);
+            }
+            Console.ReadKey();
+            bilforhandlerern.FjernBil("YF66699");
+            Console.WriteLine();
             foreach (Bil bil in bilforhandlerern.Biler)
             {
                 Console.WriteLine(bil.Merke);

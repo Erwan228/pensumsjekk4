@@ -17,7 +17,14 @@
         }
         public void FjernBil(string regNummer)
         {
-            //Biler.Remove(regNummer);
+            foreach (Bil Bil in Biler)
+            {
+                if (Bil.Registreringsnummer == regNummer)
+                {
+                    Biler.Remove(Bil);
+                    return;
+                }
+            }
         }
     }
 }
