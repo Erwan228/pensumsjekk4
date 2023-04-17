@@ -23,6 +23,7 @@
             Console.ReadKey();
             bilforhandlerern.FjernBil("YF66699");
             Console.WriteLine();
+            Console.WriteLine("Jeg fjerna én");
             foreach (Bil bil in bilforhandlerern.Biler)
             {
                 Console.WriteLine(bil.Merke);
